@@ -1,0 +1,93 @@
+*{
+    /* box-sizing: border-box; */
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    height:100vh;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.container{
+width: 400px;   
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+perspective: 1000px;
+
+
+}
+.cube{  
+   position: relative;
+   width: 200px;   
+height: 200px;
+   margin: 2px;
+   transform-style: preserve-3d;
+   /* perspective: 1000px; */
+   perspective-origin: bottom left;
+   padding: 5px 10px;
+   /* background-color: rgb(157, 164, 162); */
+   animation: rotate 10s linear  infinite;
+} 
+@keyframes rotate {
+    to{
+        transform: rotateX(0deg)rotatey(0deg) translateZ(0);
+    }
+    from{
+        transform: rotatey(0360deg)rotatex(360deg) translateZ(60px);
+    }
+}
+ .rear{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: rgb(174, 127, 255);
+   transform:translateZ(-100px);
+}
+.front{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: rgb(13, 158, 224);
+   transform: translateZ(100px) ;
+}
+
+.left{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: rgb(244, 194, 43);
+    transform: rotatey(-90deg) translateZ(100px);
+   
+}
+.right{
+    position: absolute;
+    background-color: rgb(255, 127, 214);
+    height: 100%;
+    width:100%;
+    transform: rotatey(90deg) translateZ(100px);
+   
+}
+.top{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: rgb(205, 173, 11);
+   transform: rotateX(90deg) translateZ(100px);
+}
+.bottom{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: rgb(127, 255, 221);
+    transform: rotateX(-90deg) translateZ(100px);
+   
+} 
+
+  
+ 
